@@ -1,9 +1,11 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
@@ -106,5 +108,9 @@ class MainActivity : AppCompatActivity() {
         var adapter = ViewPagerAdapter(supportFragmentManager, list)
         viewPager.adapter = adapter
         viewPager.offscreenPageLimit = 3
+    }
+
+    fun showTest(v : View){
+        startActivity(Intent(this, TestAct::class.java))
     }
 }
