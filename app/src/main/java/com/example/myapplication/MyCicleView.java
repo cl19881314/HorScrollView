@@ -15,15 +15,15 @@ import android.view.View;
 
 public class MyCicleView extends View {
     private Paint paint = new Paint();
-    private int mCentX = 90;
-    private int mCentY = 90;
-    private Camera camera;
-    private Matrix matrix;
+    private float mCentX = 480f;
+    private float mCentY = 800f;
+    private Camera mCamera;
+    private Matrix mMatrix;
 
     public MyCicleView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        camera = new Camera();
-        matrix = new Matrix();
+        mCamera = new Camera();
+        mMatrix = new Matrix();
         //去锯齿
         paint.setAntiAlias(true);
         paint.setColor(Color.BLUE);
@@ -35,22 +35,23 @@ public class MyCicleView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-//        matrix.reset();
-//        camera.save();
-//        camera.rotateX(60);
-//        camera.getMatrix(matrix);
-//        camera.restore();
-//
-//        matrix.preTranslate(-getWidth()/2, -getHeight()/2);
-//        matrix.postTranslate(getWidth()/2, getHeight()/2);
-//        canvas.rotate(90);
-        RectF rel = new RectF(mCentX + 80, mCentY + 80, mCentX + 180, mCentY + 120);
+
+        RectF rel = new RectF(mCentX - 480, mCentY - 180, mCentX + 480, mCentY + 180);
         canvas.drawOval(rel, paint);
+        canvas.drawCircle(mCentX, mCentY, 5f, paint);
+        canvas.save();
 
-        canvas.drawCircle(500f, 500f, 200f,paint);
-//        canvas.rotate(80);
+        canvas.rotate(45, mCentX, mCentY);
 
+        RectF rel2 = new RectF(mCentX - 480, mCentY - 130, mCentX + 480, mCentY + 130);
+        canvas.drawOval(rel2, paint);
+        canvas.drawCircle(mCentX, mCentY, 5f, paint);
+        canvas.save();
 
+        canvas.rotate(90, mCentX, mCentY);
+        RectF rel3 = new RectF(mCentX - 480, mCentY - 130, mCentX + 480, mCentY + 130);
+        canvas.drawOval(rel3, paint);
+        canvas.drawCircle(mCentX, mCentY, 5f, paint);
     }
 }
 
