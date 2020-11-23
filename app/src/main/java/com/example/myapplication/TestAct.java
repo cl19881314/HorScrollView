@@ -17,9 +17,9 @@ public class TestAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.layout_test);
-        MyCicleView myView = new MyCicleView(this, null);
-        setContentView(myView);
+        setContentView(R.layout.layout_test);
+//        MyCicleView myView = new MyCicleView(this, null);
+//        setContentView(myView);
     }
 
 }

@@ -3,37 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#89A9CA">
 
-    <com.xingmeng.chenxin.my3drotateview.My3dRotateView
-        android:id="@+id/mView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:childHeight="50dp"
-        app:childWidth="50dp"
-        app:margin_ovalHeight="100dp"
-        app:margin_ovalWidth="50dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher" />
-
-    </com.xingmeng.chenxin.my3drotateview.My3dRotateView>
-
+<com.example.myapplication.MyCicleView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 </LinearLayout>
